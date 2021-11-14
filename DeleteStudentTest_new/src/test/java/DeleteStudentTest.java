@@ -1,18 +1,19 @@
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.openqa.selenium.Alert;
 import org.testng.annotations.*;
-
-import java.util.List;
-import java.util.Locale;
 
 public class DeleteStudentTest {
     WebDriver driver;
 
     @BeforeClass
     public void BeforeAll() {
-        System.setProperty("webdriver.chrome.driver", "C:/Users/User/Downloads/chromedriver.exe");
-        driver = new ChomeDriver();
+        System.setProperty("webdriver.chrome.driver", "C:/Users/user/chromedriver.exe");
+        driver = new ChromeDriver();
     }
 
     @BeforeMethod
@@ -21,7 +22,7 @@ public class DeleteStudentTest {
     }
 
     @Test
-    public void deleteStudent() throws InterrupterException {
+    public void deleteStudent() throws InterruptedException {
         Thread.sleep(5000);
         int sizeBefore = driver.findElements(By.cssSelector("#user-list > li")).size();
         System.out.println(sizeBefore);

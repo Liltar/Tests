@@ -35,7 +35,7 @@ public class GoogleTest {
         searchInput.sendKeys(searchWord);
         searchInput.sendKeys(Keys.ENTER);
         List<WebElement> result = driver.findElements(By.cssSelector("div[data-text-ad='1']"));
-        result.addAll(driver.findElements(By.cssSelector("div[data-text-ad='1']"));)
+        result.addAll(driver.findElements(By.cssSelector("div[data-text-ad='1']")));
 
     }
 
