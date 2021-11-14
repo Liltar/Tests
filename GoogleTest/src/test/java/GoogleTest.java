@@ -7,6 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.*;
 
 import java.util.List;
+
 public class GoogleTest {
     WebDriver driver;
     String searchWord;
@@ -33,8 +34,8 @@ public class GoogleTest {
         WebElement searchInput = driver.findElement(By.ByCssSelector.cssSelector("input[name='q']"));
         searchInput.sendKeys(searchWord);
         searchInput.sendKeys(Keys.ENTER);
-//        List<WebElement> result = driver.findElements(By.cssSelector("div[data-text-ad='1']"));
-//        result.addAll(driver.findElements(By.cssSelector("div[data-text-ad='1']"));)
+        List<WebElement> result = driver.findElements(By.cssSelector("div[data-text-ad='1']"));
+        result.addAll(driver.findElements(By.cssSelector("div[data-text-ad='1']")));
 
     }
 
